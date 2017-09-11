@@ -72,7 +72,7 @@ public class Employee {
 
     public void update() {
         String sql = String.format("UPDATE employees SET name = '%s', " +
-                        "SET salary = %7.2f, SET department_id = %d WHERE id = %d;",
+                        "salary = %7.2f, department_id = %d WHERE id = %d;",
                 this.name, this.salary, this.getDepartment().getId(), this.id);
         SqlRunner.executeUpdate(sql);
         SqlRunner.closeConnection();
