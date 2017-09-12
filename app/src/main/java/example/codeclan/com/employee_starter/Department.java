@@ -60,7 +60,7 @@ public class Department {
         SqlRunner.closeConnection();
     }
 
-    public void findByTitle(String title){
+    public static void findByTitle(String title){
         String sql  = String.format("SELECT * FROM departments WHERE title = '%s';", title);
         SqlRunner.executeQuery(sql);
         SqlRunner.closeConnection();

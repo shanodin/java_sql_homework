@@ -78,7 +78,7 @@ public class Employee {
         SqlRunner.closeConnection();
     }
 
-    public void findByName(String name){
+    public static void findByName(String name){
         String sql  = String.format("SELECT * FROM employees WHERE name = '%s';", name);
         SqlRunner.executeQuery(sql);
         SqlRunner.closeConnection();
